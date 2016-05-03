@@ -83,6 +83,16 @@
                     }               
                 })          
             });
+            $('.circle').click(function () {
+                $.ajax({
+                    type: 'GET',
+                    dataType: 'html',
+                    url: '@Url.Action("Circle", "Math")',
+                    success: function (result) {
+                        $('#result7').html(result);
+                    }
+                })
+            });
       });
     </script>
 </head>
@@ -120,6 +130,9 @@
     </form>
     <div id="result6"></div>
 
- 
+    <h2 class="circle">Math Post Request</h2>
+    <div id="result7">hey</div>
+
+
 </body>
 </html>
